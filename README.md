@@ -49,9 +49,9 @@ The output file format is:
 The data type for percentage is float (2 decimal values). The other fields have an integer data type.
 
 The output file adheres to the following pre-specified rules:
-    Output is listed in a ascending sorted order by department_id
-    department_id is listed only where number_of_orders is greater than 0
-    percentage has been rounded to the second decimal
+    (a.) Output is listed in a ascending sorted order by department_id, 
+    (b.) department_id is listed only where number_of_orders is greater than 0, and 
+    (c.) percentage has been rounded to the second decimal
     
 **Repository directory structure**
 The directory structure for our repo looks like below:
