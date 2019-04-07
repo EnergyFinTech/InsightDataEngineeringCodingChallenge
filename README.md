@@ -60,7 +60,7 @@ The directory structure for our repo looks like below:
     ├── README.md
     ├── run.sh
     ├── src
-    │   └── purchase_analytics.py
+    │   └── rptDeptOrder.py
     ├── input
     │   └── products.csv
     |   └── order_products.csv
@@ -70,18 +70,24 @@ The directory structure for our repo looks like below:
         └── run_tests.sh
         └── tests
             └── test_1
+            |   ├── src
+            |   │   └── rptDeptOrder.py      (Its a link to or copy of main src/rptDeptOrder.py code)
             |   ├── input
             |   │   └── products.csv
             |   │   └── order_products.csv
             |   |__ output
             |       └── report.csv
             ├── test_train
+            |   ├── src
+            |   │   └── rptDeptOrder.py      (Its a link to or copy of main src/rptDeptOrder.py code)
             |   ├── input
             |   │   └── products.csv
             |   │   └── order_products.csv    (Its a copy of order_products__train.csv)
             |   |__ output
             |       └── report.csv
             ├── test_prior
+                ├── src
+                │   └── rptDeptOrder.py      (Its a link to or copy of main src/rptDeptOrder.py code)
                 ├── input
                 │   └── products.csv
                 |   └── order_products.csv    (Its a copy of order_products__prior.csv)
