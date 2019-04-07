@@ -94,17 +94,36 @@ The directory structure for our repo looks like below:
                 |── output
                     └── report.csv
  
-### Code and Development practice
+### Code
+#### Development Environment
 I created a single code script rptDeptOrder.py using Python version 3.6 (64-bit) using standard IDLE development environment on a Windows 10 PC. It references two standard python libraries sys and csv.
- 
-The code follows a descriptive self-documented type coding style. General descriptive variable naming convention has been observed.
-Simplicity and readability has been preferred at some instances without sacrificing much efficiency. 
-Some extra checks have been incorporated to overcome often encountered issues dealing with data from unknown external sources. For example 
-    checking ccount of encountered values on each line meets expected format,
-    data type checking and conversion,
-    checking for missing or none,
-    warning when orders reference a product that is not listed in the master file,
-    generating descriptive diagnostic messages, etc.
+
+#### Data Structures
+I created 2 Dictionary objects as data containers to facilitate processing:
+1. dictLookupDept: here I use Product_ID as KEY to lookUp Department_ID value using the products.csv
+2. dictDeptMeasures: here I maintain Output results,
+           for each department_id (using it as the unique Key)
+               we shall update the corresponding statistics
+                   number_of_orders, number_of_first_orders
+               based on product_orders.csv data
+
+##### RATIONALE: for choosing DICTIONARY as the data structure / data container
+               a. We need ability to perform a fast KEY based search/ LookUp.
+                       Dictionaries provide Hash Key algorithms for fast search and sort.
+               b. We can maintain a corresponding LIST of values, for each KEY.
+                       The value corresponding to each key, itself may be a list of items (or other data containers).
+           A Dictionary could be considered functionally similar to a relational database table with a unique key field based index.
+
+#### Development Practice and Considerations
+* The code follows a descriptive self-documented type coding style. General descriptive variable naming convention has been observed.
+* Simplicity and readability has been preferred at some instances without sacrificing much efficiency. 
+* Some extra checks have been incorporated to overcome often encountered issues dealing with data from unknown external sources. For example 
+    - specified encoding="ascii" amd errors="surrogateescape" to overcome encoding errors while reading input files,
+    - checking count of encountered values on each line to the expected format,
+    - data type checking and conversion,
+    - checking for missing or none,
+    - warning when orders reference a product that is not listed in the master file,
+    - generating descriptive diagnostic messages, etc.
 
 ### Testing
 The code was tested using Python 3.6 version.
