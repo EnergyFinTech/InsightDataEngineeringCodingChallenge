@@ -58,6 +58,7 @@ The output file adheres to the following pre-specified rules:
 The directory structure for our repo looks like below:
 
     ├── README.md
+    ├── run.bat                               (used to test in Windows environment)
     ├── run.sh
     ├── src
     │   └── rptDeptOrder.py
@@ -66,10 +67,13 @@ The directory structure for our repo looks like below:
     |   └── order_products.csv
     ├── output
     |   └── report.csv
-    ├── insight_testsuite
+    └── insight_testsuite
+        └── run_tests.bat                    (used to test in Windows environment)
         └── run_tests.sh
         └── tests
-            └── test_1
+            ├── test_1
+            |   ├── run.bat                  (used to test in Windows environment)
+            |   ├── run.sh
             |   ├── src
             |   │   └── rptDeptOrder.py      (Its a link to or copy of main src/rptDeptOrder.py code)
             |   ├── input
@@ -78,20 +82,24 @@ The directory structure for our repo looks like below:
             |   |__ output
             |       └── report.csv
             ├── test_train
+            |   ├── run.bat                  (used to test in Windows environment)
+            |   ├── run.sh
             |   ├── src
             |   │   └── rptDeptOrder.py      (Its a link to or copy of main src/rptDeptOrder.py code)
             |   ├── input
             |   │   └── products.csv
-            |   │   └── order_products.csv    (Its a copy of order_products__train.csv)
+            |   │   └── order_products.csv   (Its a copy of order_products__train.csv)
             |   |__ output
             |       └── report.csv
-            ├── test_prior
+            └── test_prior
+                ├── run.bat                  (used to test in Windows environment)
+                ├── run.sh
                 ├── src
                 │   └── rptDeptOrder.py      (Its a link to or copy of main src/rptDeptOrder.py code)
                 ├── input
                 │   └── products.csv
-                |   └── order_products.csv    (Its a copy of order_products__prior.csv)
-                |── output
+                |   └── order_products.csv   (Its a copy of order_products__prior.csv)
+                └── output
                     └── report.csv
  
 ### Code
@@ -134,3 +142,8 @@ The test input data and generated results for the two scenarios have been upload
  
 Unit tests for specific instances of product_id were used for validation.
  
+### Instructions
+I developed and tested my code on a Windows Environment. I used Python version 3.6 64-bit version. 
+I used run.bat and run_tests.bat files to run my tests. The respective input and outputs are also uploaded in the repository.
+
+I believe the code would work fine on a Unix/Linux environment too. I have named the command as python3 in the respective run.sh scripts.
