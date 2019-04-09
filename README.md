@@ -149,3 +149,62 @@ The python code assumes that the the src folder is the current working directory
 I used run.bat and run_tests.bat files, besides the Python version 3.6 64-bit edition IDLE to successfully run my code for the various test scenarios (test_1, test_prior and test_train). The respective input and outputs are also uploaded in the repository.
 
 I believe this code would work fine on a Unix/Linux environment too. I have named the command as python3 in the respective run.sh scripts.
+
+#### TEST Site Link Output
+The output from the test site link http://ec2-3-209-212-171.compute-1.amazonaws.com/test-my-repo-link
+provided in the instructions is mentioned below.
+
+Test your github or bitbucket link
+Insight is providing this service to applicants to allow them to test their code prior to submission.
+
+By running this test, applicants will know if their repo directory structure follows the format detailed in the coding challenge instructions and passes a single basic test. This tester simulates the conditions our staff will use to review your submission but it will not grade your code. An Insight staff member will personally review your code once you submit it.
+
+Note that submissions ARE NOT ACCEPTED on this site. To submit your coding challenge solution, you must follow the instructions e-mailed to you. Using this site does not constitute a submission.
+
+Results:
+
+Cloning repo (https://github.com/EnergyFinTech/InsightDataEngineeringCodingChallenge) succeeded
+
+========
+
+RUNNING: test_1
+
+(stdout): PARSE PRODUCTs FILE~~~~~~~~~~~~~Begin~~~~~~~~~~~~~~~~~~
+(stdout): Dictionary: added product_id 9327: department_id 13
+(stdout): Dictionary: added product_id 17461: department_id 12
+(stdout): Dictionary: added product_id 17668: department_id 16
+(stdout): Dictionary: added product_id 28985: department_id 4
+(stdout): dictLookupDept has 9 unique product_id (s) 
+(stdout): <class 'dict'>
+(stdout): PARSE PRODUCTs FILE~~~~~~~~~~~~~End~~~~~~~~~~~~~~~~~~
+(stdout): PARSE ORDER DETAILs FILE~~~~~~~~~~~Begin~~~~~~~~~~~~~~~~~~~~
+(stdout): Dictionary: Introduced department_id 16
+(stdout): Dictionary: Updated measures for department_id 16
+(stdout): Dictionary: Introduced department_id 4
+(stdout): Dictionary: Updated measures for department_id 4
+(stdout): Dictionary: Introduced department_id 13
+(stdout): Dictionary: Updated measures for department_id 13
+(stdout): Dictionary: Updated measures for department_id 13
+(stdout): dictLookupOrderSummary has 5 unique department_id (s) 
+(stdout): <class 'dict'>
+(stdout): PARSE ORDER DETAILs FILE~~~~~~~~~~~End~~~~~~~~~~~~~~~~~~~~
+(stdout): OUTPUT GENERATION ~~~~~~~~~~~Begin~~~~~~~~~~~~~~~~~~~~
+(stdout): OUTPUT GENERATION ~~~~~~~~~~~End~~~~~~~~~~~~~~~~~~~~
+-------------
+TEST RESULTS:
+
+Started process: 02:41:44
+Ended process: 02:41:44
+
+* Matched (department_id,number_of_orders,number_of_first_orders,percentage)!
+* Matched (3,2,1,0.50)!
+* Matched (4,2,0,0.00)!
+* Matched (12,1,0,0.00)!
+* Matched (13,2,1,0.50)!
+* Matched (16,2,0,0.00)!
+
+test_1: 6 out of 6 is/are correct
+
+* Passed!
+
+Executed key tests: 1 out of 1 passed.
